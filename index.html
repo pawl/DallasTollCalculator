@@ -1,0 +1,44 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Dallas Toll Calculator</title> 
+		<link rel="stylesheet"  href="jquery.mobile-1.2.0.min.css" />  
+		<script src="json2.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="custom-scripting.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+		<script src="jstorage.js"></script>
+		<script src="jquery.touchToClick.js"></script>
+		<script src="cordova-2.2.0.js"></script>
+		
+		<style>
+		#pageId div .ui-header a { display:none;}
+		</style>
+	</head> 
+<body> 
+
+	<div data-role="dialog" id="pageId">
+	
+		<div data-role="header">
+			<h1>Dallas Toll Calculator</h1>
+
+		</div>
+
+		<div data-role="content">
+			<center><h2>Do you have a Toll Tag?</h2></center>
+			<a href="layer1.html" data-role="button" data-theme="b">Yes</a>       
+			<a href="layer1.html" data-role="button" data-theme="c">No</a>
+			<script>
+			$("a").attr('data-prefetch','true');
+
+			$("a").click(function() {
+				var tempTag = $(this).text().trim();
+				$.jStorage.set("tollTag", tempTag);
+			});
+			</script>    
+		</div>
+	</div>
+</body>
+</html>

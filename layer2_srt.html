@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Dallas Toll Calculator</title> 
+		<link rel="stylesheet"  href="jquery.mobile-1.2.0.min.css" />  
+		<script src="json2.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="custom-scripting.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+		<script src="jstorage.js"></script>
+		<script src="jquery.touchToClick.js"></script>
+	</head> 
+<body> 
+
+<div data-role="page" class="type-interior" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Start Point</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<ul data-role="listview" data-filter="true">
+			<li><a>Business 121/Denton Tap</a></li>
+			<li><a>Macarthur</a></li>
+			<li><a>Lake Vista</a></li>
+			<li><a>IH 35E/Huffines/Hebron</a></li>
+			<li><a>Carrollton Pkwy</a></li>
+			<li><a>Parker</a></li>
+			<li><a>Old Denton</a></li>
+			<li><a>Standridge</a></li>
+			<li><a>Josey</a></li>
+			<li><a>Plano Pkwy</a></li>
+			<li><a>Spring Creek</a></li>
+			<li><a>Legacy</a></li>
+			<li><a>DNT</a></li>
+			<li><a>Parkwood</a></li>
+			<li><a>Preston</a></li>
+			<li><a>Ohio</a></li>
+			<li><a>Hillcrest</a></li>
+			<li><a>Coit</a></li>
+			<li><a>Independence</a></li>
+			<li><a>Custer</a></li>
+			<li><a>Exchange</a></li>
+			<li><a>Alma</a></li>
+			<li><a>Stacy</a></li>
+			<li><a>Lake Forest</a></li>
+			<li><a>Hardin</a></li>
+			<li><a>US 75</a></li>		
+		</ul>
+
+	<script>
+	$("a").attr('href','layer3_srt.html');
+
+	$("li").click(function() {
+		var tempLayer2 = $(this).text().trim();
+		$.jStorage.set("layer2", tempLayer2);
+	});
+	</script>
+
+	</div><!--/content-->
+	
+	<div data-role="footer" class="footer-docs" data-theme="a">
+	</div>
+
+	</div><!-- /page -->
+
+</body>
+</html>

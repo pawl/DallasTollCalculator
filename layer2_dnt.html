@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Dallas Toll Calculator</title> 
+		<link rel="stylesheet"  href="jquery.mobile-1.2.0.min.css" />  
+		<script src="json2.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="custom-scripting.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+		<script src="jstorage.js"></script>
+		<script src="jquery.touchToClick.js"></script>
+	</head> 
+<body> 
+
+<div data-role="page" class="type-interior" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Start Point</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<ul data-role="listview" data-filter="true">
+			<li><a>IH 35E/Oaklawn/Wycliff</a></li>
+			<li><a>Mockingbird/Lemmon</a></li>
+			<li><a>Lovers/Northwest Hwy.</a></li>
+			<li><a>Walnut Hill/Royal</a></li>
+			<li><a>Forest/Harvest Hill</a></li>
+			<li><a>IH 635</a></li>
+			<li><a>Alpha</a></li>
+			<li><a>Spring Valley</a></li>
+			<li><a>Beltline</a></li>
+			<li><a>Arapaho</a></li>
+			<li><a>Keller Springs</a></li>
+			<li><a>Trinity Mills/Frankford</a></li>
+			<li><a>PGBT</a></li>
+			<li><a>Plano Parkway</a></li>
+			<li><a>Park</a></li>
+			<li><a>Parker</a></li>
+			<li><a>Windhaven/Spring Creek</a></li>
+			<li><a>Legacy</a></li>
+			<li><a>Headquarters</a></li>
+			<li><a>SRT</a></li>
+			<li><a>Gaylord</a></li>
+			<li><a>Warren</a></li>
+			<li><a>John Hickman</a></li>
+			<li><a>Lebanon</a></li>
+			<li><a>Stonebrook</a></li>
+			<li><a>Cotton Gin/Main</a></li>
+			<li><a>Eldorado</a></li>
+			<li><a>Panther Creek</a></li>
+			<li><a>CR 24/US 380</a></li>		
+		</ul>
+
+	<script>
+	$("a").attr('href','layer3_dnt.html');
+
+	$("li").click(function() {
+		var tempLayer2 = $(this).text().trim();
+		$.jStorage.set("layer2", tempLayer2);
+	});
+	</script>
+
+	</div><!--/content-->
+	
+	<div data-role="footer" class="footer-docs" data-theme="a">
+	</div>
+
+	</div><!-- /page -->
+
+</body>
+</html>

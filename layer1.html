@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Dallas Toll Calculator</title> 
+		<link rel="stylesheet"  href="jquery.mobile-1.2.0.min.css" />  
+		<script src="json2.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="custom-scripting.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+		<script src="jstorage.js"></script>
+		<script src="jquery.touchToClick.js"></script>
+	</head> 
+<body> 
+
+<div data-role="page" class="type-interior" >
+
+	<div data-role="header">
+		<a href="index.html" data-icon="arrow-l">Back</a>
+		<h1>Dallas Toll Calculator</h1>
+	</div><!-- /header -->
+
+
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li class="layer1">
+				<a href="layer2_dnt.html">Dallas North Tollway</a>
+			</li>		
+			
+			<li class="layer1">
+				<a href="layer2_gbt.html">President George Bush Turnpike</a>		
+			</li>
+
+			<li class="layer1">
+				<a href="layer2_srt.html">Sam Rayburn Tollway</a>	
+			</li>
+		</ul>
+
+	<script>
+	$("li").click(function() {
+		var tempLayer1 = $(this).text().trim();
+		$.jStorage.set("layer1", tempLayer1);
+	});
+	</script>
+
+	</div><!--/content-->
+	
+	<div data-role="footer" class="footer-docs" data-theme="a">
+	</div>
+
+	</div><!-- /page -->
+
+</body>
+</html>

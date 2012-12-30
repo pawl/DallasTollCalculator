@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Dallas Toll Calculator</title> 
+		<link rel="stylesheet"  href="jquery.mobile-1.2.0.min.css" />  
+		<script src="json2.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="custom-scripting.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+		<script src="jstorage.js"></script>
+		<script src="jquery.touchToClick.js"></script>
+	</head> 
+<body> 
+
+<div data-role="page" class="type-interior" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Start Point</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<ul data-role="listview" data-filter="true">
+			<li><a>IH 20</a></li>
+			<li><a>Mayfield</a></li>
+			<li><a>Pioneer/Arkansas</a></li>
+			<li><a>Marshall</a></li>
+			<li><a>Dalworth/Main/Jefferson</a></li>
+			<li><a>IH 30</a></li>
+			<li><a>Carrier/Egyptian Way</a></li>
+			<li><a>Lower Tarrant</a></li>
+			<li><a>Shady Grove/Trinity/Oakdale</a></li>
+			<li><a>Conflans</a></li>
+			<li><a>SH 183**</a></li>
+			<li><a>Rochelle**</a></li>
+			<li><a>Northgate**</a></li>
+			<li><a>Walnut Hill**</a></li>
+			<li><a>Belt Line W**</a></li>
+			<li><a>Gateway</a></li>
+			<li><a>SH 114/Royal</a></li>
+			<li><a>Macarthur</a></li>
+			<li><a>IH 635/Valley View/Las Colinas</a></li>
+			<li><a>Belt Line E.</a></li>
+			<li><a>IH 35E/Sandy Lake/Old Denton</a></li>
+			<li><a>Josey</a></li>
+			<li><a>Kelly***</a></li>
+			<li><a>Frankford/Marsh</a></li>
+			<li><a>Rosemeade/Midway</a></li>
+			<li><a>DNT</a></li>
+			<li><a>Preston</a></li>
+			<li><a>Coit</a></li>
+			<li><a>Independence</a></li>
+			<li><a>Custer</a></li>
+			<li><a>US 75/Alma/Plano</a></li>
+			<li><a>Jupiter</a></li>
+			<li><a>Renner</a></li>
+			<li><a>Shiloh/Blackburn</a></li>
+			<li><a>Campbell</a></li>
+			<li><a>Holford</a></li>
+			<li><a>North Garland</a></li>
+			<li><a>Brand</a></li>
+			<li><a>SH 78</a></li>
+			<li><a>Crist</a></li>
+			<li><a>Firewheel</a></li>
+			<li><a>Miles</a></li>
+			<li><a>Merritt N</a></li>
+			<li><a>Liberty Grove/Merritt S</a></li>
+			<li><a>SH 66 (Lakeview)</a></li>
+			<li><a>Main</a></li>
+			<li><a>Miller</a></li>
+			<li><a>IH 30</a></li>		
+		</ul>
+
+	<script>
+	$("a").attr('href','layer3_gbt.html');
+
+	$("li").click(function() {
+		var tempLayer2 = $(this).text().trim();
+		$.jStorage.set("layer2", tempLayer2);
+	});
+	</script>
+
+	</div><!--/content-->
+	
+	<div data-role="footer" class="footer-docs" data-theme="a">
+	</div>
+
+	</div><!-- /page -->
+
+</body>
+</html>
