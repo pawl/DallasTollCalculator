@@ -1,8 +1,10 @@
 Description:
 
-*Made to be build as a phonegap app.
+*Calculates costs of tolls on all major Dallas Toll Roads.
 
-*Calculates costs of tolls in dallas.
+Technical Details:
+
+*Made to be built using PhoneGap Build.
 
 *Interface was done with Jquery Mobile.
 
